@@ -1,0 +1,141 @@
+﻿@model GYM.Models.PreRegisterationForm
+
+@{
+    ViewBag.Title = "PreRegistration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        @@media only screen and (min-width:960px) {
+            #preregisteration {
+                background-image: url('../../Images/Water-wallpaper-12.jpg');
+                /*opacity:0.1;*/
+                border-radius: 5px;
+            }
+            #img {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                margin-left: 140px;
+                margin-top: 30px;
+            }
+
+            #h1 {
+                text-align: center;
+                color: white;
+            }
+
+            #p {
+                text-align: center;
+                color: white
+            }
+        }
+
+        @@media only screen and (min-width:769px) and (max-width:959px) {
+            #img {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                margin-left: 100px;
+                margin-top: 50px;
+            }
+
+            #h1 {
+                text-align: center;
+                font-size: 50px;
+                color: white;
+            }
+
+            #p {
+                text-align: center;
+                font-size: 25px;
+                color: white
+            }
+        }
+
+        @@media only screen and (max-width:768px) {
+            #img {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                margin-left: 60px;
+                margin-top: 56px;
+                margin-bottom: 50px;
+            }
+
+            #h1 {
+                text-align: center;
+                font-size: 40px;
+                color: white;
+            }
+
+            #p {
+                text-align: center;
+                font-size: 20px;
+                color: white
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="preregisteration" class="container" style="width:600px;height:650px;">
+        <form method="post">
+            <div class="container">
+                <br /><br />
+                <h2><b>PreRegistration</b></h2><br /><br />
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name"><b>Name</b></label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="surname"><b>Surname</b></label>
+                        <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="branch"><b>Branch</b></label>
+                        <input type="text" class="form-control" id="branches" name="branches" placeholder="Branch">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="facility"><b>Facility</b></label>
+                        <input type="text" class="form-control" id="facilities" name="facilities" placeholder="Facility">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="time"><b>Training Time</b></label>
+                    <input type="time" class="form-control" id="session" name="session">
+                </div>
+                <div class="form-group">
+                    <label for="coach"><b>Coach</b></label>
+                    <input type="text" class="form-control" id="coach" name="coach" placeholder="Coach">
+                </div>
+                <div class="form-group">
+                    <label for="phone"><b>Phone</b></label>
+                    <input type="text" class="form-control" id="Phone" name="phone" placeholder="Phone">
+                </div>
+                <button type="submit" class="btn btn-primary">Save</button>
+                <br /><br /><br /><br /><br />
+                @if (true)
+                {
+                    <div class="alert alert-success" role="alert">
+                        This is a success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                    </div>
+                }
+            </div>
+        </form>
+    </div>
+    <div class="jumbotron jumbotron-fluid" id="jumbotron">
+        <div style="background-color:black; height:180px;">
+            <img src="/Images/12618.gif" alt="Alternate Text" id="img" />
+            <h1 class="display-4 p-3" id="h1">Geforce GYM</h1>
+            <p class="lead" id="p"><i>No pain no gain!</i></p>
+        </div>
+    </div>
+    <script>
+        $('.alert').alert()
+    </script>
+</body>

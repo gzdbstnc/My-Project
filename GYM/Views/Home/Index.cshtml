@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <title>TEST</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+            background: #f7f7f7;
+            height: 2000px;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            padding: 10px;
+            background: #3a3a3a;
+            margin: 0;
+            box-shadow: 0px 0px 10px -2px #3a3a3a;
+        }
+
+            nav .menu-link-group {
+                width: 50%;
+                margin-right: auto;
+                margin-left: auto;
+                display: flex;
+                justify-content: space-around;
+            }
+
+        .menu-link {
+            color: #d4d4d4;
+            text-decoration: none !important;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+            .menu-link:hover {
+                color: #f7f7f7;
+            }
+
+        header {
+            background: rgba(247, 247, 247, 0.40);
+        }
+
+        .jumbotron {
+            background: none !important;
+            margin: 0;
+        }
+
+        section {
+            height: 400px;
+            background: #f7f7f7;
+         
+        }
+
+        .index-background {
+            width: 100%;
+            height: 400px;
+        }
+
+        #background1 {
+            position: fixed;
+            top: 0;
+            background: url('/Images/gym-hero.jpg');
+            background-position: center center;
+            background-size: cover;
+            z-index: -3;
+        }
+
+        #background2 {
+            background: url('/Images/HS-HDElite-Rack-BC-4psd.jpg');
+            background-position: center center;
+            background-size: cover;
+            position: fixed;
+            top: 400px;
+            z-index: -2;
+        }
+
+        #background3 {
+            background: url('/Images/Water-wallpaper-12.jpg');
+            background-position: center center;
+            background-size: cover;
+            position: fixed;
+            top: 800px;
+            /*z-index: -1;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <nav>
+            <div class="menu-link-group">
+                <a href="~/Views/Home/Index.cshtml" class="menu-link">Home Page</a>
+                <a href="~/Views/Home/" class="menu-link">Facilities</a>
+                <a href="#" class="menu-link">Branches</a>
+                <a href="#" class="menu-link">Payment Entry</a>
+                <a href="~/Views/Home/Contact.cshtml" class="menu-link">Contact</a>
+            </div>
+        </nav>
+    </div>
+    <header class="container-fluid">
+        <div class="jumbotron container">
+            <h1 class="display-4"><b>Geforce GYM</b></h1>
+            <p class="lead"><b>Welcome to our site!</b></p>
+            <hr class="my-4">
+            <p><b>For transactions please register or login.</b></p>
+            <div class="row">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Register</a><br /><br />
+                <a class="btn btn-primary btn-lg" href="#" role="button" style="margin-left:30px;">Login</a>
+            </div>
+
+        </div>
+    </header>
+    <section>
+        <div class="container text-center">
+            <h1 class="pt-5"> Hello World! </h1>
+            <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        </div>
+    </section>
+    <header class="container-fluid">
+        <div class="jumbotron container">
+            <h1 class="display-4"><b>Pre-Registration Form</b></h1>
+            <p class="lead"><b>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</b></p>
+            <hr class="my-4">
+            <p class="lead">
+                <b><a href="~/Views/Home/PreRegistration.cshtml">Click for pre-registration</a></b>
+            </p>
+            @*<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>*@
+        </div>
+    </header>
+    <section class="p-4" style="height: 550px">
+        <div class="card-group">
+            <div class="card">
+                <img src="~/Images/exercise-fitness-gettyimage.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Gallery</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <a href="~/Views/Home/Gallery.cshtml">Click for more pictures</a>
+                    @*<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>*@
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Images/Screenshot_5.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Blog</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <a href="~/Views/Home/Blog.cshtml">Click for more details</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Images/Screenshot_6.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">About Us</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <a href="~/Views/Home/AboutUs.cshtml">Click for more information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <header class="container-fluid bg-dark mt-lg-4 mt-sm-4">
+        <div class="jumbotron container ">
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-fb mx-1">
+                        <img src="~/Images/facebook.png" alt="Alternate Text" />
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-tw mx-1">
+                        <img src="~/Images/twitter.png" alt="Alternate Text" />
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-gplus mx-1">
+                        <img src="~/Images/google-plus.png" alt="Alternate Text" />
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                        <img src="~/Images/swarm.png" alt="Alternate Text" />
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-dribbble mx-1">
+                        <img src="~/Images/instagram.png" alt="Alternate Text" />
+                    </a>
+                </li>
+            </ul>
+
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+    </header>
+    <div class="index-background" id="background1">
+    </div>
+    <div class="index-background" id="background2">
+    </div>
+    <div class="index-background" id="background3">
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+</body>
+
+</html>

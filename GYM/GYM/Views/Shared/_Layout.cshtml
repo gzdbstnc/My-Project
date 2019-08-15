@@ -1,0 +1,476 @@
+﻿@model GYM.Models.User
+<!DOCTYPE html>
+<html>
+<head>
+
+    @RenderSection("head", required: false)
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    @*<link href="~/Content/popup.css" rel="stylesheet" />*@
+    <style>
+
+        @@media only screen and (min-width:960px) {
+
+            .scrollup {
+                width: 40px;
+                height: 40px;
+                position: fixed; /*butonun sayfa içindeki yerini belirliyor..*/
+                bottom: 20px; /*butonun sayfa içindeki yerini belirliyor..*/
+                right: 15px; /*butonun sayfa içindeki yerini belirliyor..*/
+                display: none;
+                text-indent: -9999px;
+                background: url('../../Images/chevron-up.png') no-repeat center; /*buton içine resim getirip resmi ortaya sabitleyen kod..*/
+                background-color: #000;
+            }
+
+
+            body {
+                padding: 0;
+                margin: 0;
+                scroll-behavior: smooth;
+                background: #f7f7f7;
+                height: 2000px;
+            }
+
+            nav {
+                position: fixed;
+                width: 100%;
+                padding: 10px;
+                background: #3a3a3a;
+                margin: 0;
+                box-shadow: 0px 0px 10px -2px #3a3a3a;
+            }
+
+                nav .menu-link-group {
+                    width: 50%;
+                    margin-right: auto;
+                    margin-left: auto;
+                    display: flex;
+                    justify-content: space-around;
+                }
+
+            .menu-link {
+                color: #d4d4d4;
+                text-decoration: none !important;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+
+                .menu-link:hover {
+                    color: #f7f7f7;
+                }
+
+            header {
+                background: rgba(247, 247, 247, 0.40);
+            }
+
+            .jumbotron {
+                background: none !important;
+                margin: 0;
+            }
+
+            section {
+                height: 400px;
+                background: #f7f7f7;
+            }
+
+            .index-background {
+                width: 100%;
+                height: 400px;
+            }
+
+            #background1 {
+                position: fixed;
+                top: 0;
+                background: url('/Images/gym-hero.jpg');
+                background-position: center center;
+                background-size: cover;
+                z-index: -3;
+            }
+
+            #background2 {
+                background: url('/Images/HS-HDElite-Rack-BC-4psd.jpg');
+                background-position: center center;
+                background-size: cover;
+                position: fixed;
+                top: 400px;
+                z-index: -2;
+            }
+
+            #background3 {
+                background: url('/Images/6-Reasons.png');
+                background-position: center center;
+                background-size: cover;
+                opacity: 0.9;
+                position: fixed;
+                top: 800px;
+                /*z-index: -1;*/
+            }
+
+            #background4 {
+                /*background: url('/Images/6-Reasons.png');*/
+                background-position: center center;
+                background-size: cover;
+                /*opacity: 0.9;*/
+                position: fixed;
+                top: 800px;
+                /*z-index: -1;*/
+            }
+
+            #jumbotron {
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                height: 230px;
+            }
+        }
+
+        @@media only screen and (min-width:769px) and (max-width:959px) {
+            .scrollup {
+                width: 40px;
+                height: 40px;
+                position: fixed; /*butonun sayfa içindeki yerini belirliyor..*/
+                bottom: 20px; /*butonun sayfa içindeki yerini belirliyor..*/
+                right: 15px; /*butonun sayfa içindeki yerini belirliyor..*/
+                display: none;
+                text-indent: -9999px;
+                background: url('../../Images/chevron-up.png') no-repeat center; /*buton içine resim getirip resmi ortaya sabitleyen kod..*/
+                background-color: #000;
+            }
+
+
+            body {
+                padding: 0;
+                margin: 0;
+                scroll-behavior: smooth;
+                background: #f7f7f7;
+                height: 2000px;
+            }
+
+            nav {
+                position: fixed;
+                width: 100%;
+                padding: 10px;
+                background: #3a3a3a;
+                margin: 0;
+                box-shadow: 0px 0px 10px -2px #3a3a3a;
+            }
+
+                nav .menu-link-group {
+                    width: 50%;
+                    margin-right: 50%;
+                    margin-left: 25%;
+                    display: inline;
+                    justify-content: space-around;
+                }
+
+            .menu-link {
+                color: #d4d4d4;
+                text-decoration: none !important;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+
+                .menu-link:hover {
+                    color: #f7f7f7;
+                }
+
+            header {
+                background: rgba(247, 247, 247, 0.40);
+            }
+
+            .jumbotron {
+                background: none !important;
+                margin: 0;
+            }
+
+            section {
+                height: 400px;
+                background: #f7f7f7;
+            }
+
+            .index-background {
+                width: 100%;
+                height: 400px;
+            }
+
+            #background1 {
+                position: fixed;
+                top: 0;
+                background: url('/Images/gym-hero.jpg');
+                background-position: center center;
+                background-size: cover;
+                z-index: -3;
+            }
+
+            #background2 {
+                background: url('/Images/HS-HDElite-Rack-BC-4psd.jpg');
+                background-position: center center;
+                background-size: cover;
+                position: fixed;
+                top: 400px;
+                z-index: -2;
+            }
+
+            #background3 {
+                background: url('/Images/6-Reasons.png');
+                background-position: center center;
+                background-size: cover;
+                opacity: 0.9;
+                position: fixed;
+                top: 800px;
+                /*z-index: -1;*/
+            }
+
+            #background4 {
+                /*background: url('/Images/6-Reasons.png');*/
+                background-position: center center;
+                background-size: cover;
+                /*opacity: 0.9;*/
+                position: fixed;
+                top: 800px;
+                /*z-index: -1;*/
+            }
+
+            #jumbotron {
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                height: 230px;
+            }
+        }
+
+        @@media only screen and (max-width:768px) {
+            .scrollup {
+                width: 40px;
+                height: 40px;
+                position: fixed; /*butonun sayfa içindeki yerini belirliyor..*/
+                bottom: 20px; /*butonun sayfa içindeki yerini belirliyor..*/
+                right: 15px; /*butonun sayfa içindeki yerini belirliyor..*/
+                display: none;
+                text-indent: -9999px;
+                background: url('../../Images/chevron-up.png') no-repeat center; /*buton içine resim getirip resmi ortaya sabitleyen kod..*/
+                background-color: #000;
+            }
+
+
+            body {
+                padding: 0;
+                margin: 0;
+                scroll-behavior: smooth;
+                background: #f7f7f7;
+                height: 2000px;
+            }
+
+            nav {
+                position: fixed;
+                width: 100%;
+                padding: 10px;
+                background: #3a3a3a;
+                margin: 0;
+                box-shadow: 0px 0px 10px -2px #3a3a3a;
+            }
+
+                nav .menu-link-group {
+                    width: 50%;
+                    margin-right: 15%;
+                    margin-left: 5%;
+                    display: inline;
+                    justify-content: space-around;
+                }
+
+            .menu-link {
+                color: #d4d4d4;
+                text-decoration: none !important;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+
+                .menu-link:hover {
+                    color: #f7f7f7;
+                }
+
+            header {
+                background: rgba(247, 247, 247, 0.40);
+            }
+
+            .jumbotron {
+                background: none !important;
+                margin: 0;
+            }
+
+            section {
+                height: 400px;
+                background: #f7f7f7;
+            }
+
+            .index-background {
+                width: 100%;
+                height: 400px;
+            }
+
+            #background1 {
+                position: fixed;
+                top: 0;
+                background: url('/Images/gym-hero.jpg');
+                background-position: center center;
+                background-size: cover;
+                z-index: -3;
+            }
+
+            #background2 {
+                background: url('/Images/HS-HDElite-Rack-BC-4psd.jpg');
+                background-position: center center;
+                background-size: cover;
+                position: fixed;
+                top: 400px;
+                z-index: -2;
+            }
+
+            #background3 {
+                background: url('/Images/6-Reasons.png');
+                background-position: center center;
+                background-size: cover;
+                opacity: 0.9;
+                position: fixed;
+                top: 800px;
+                /*z-index: -1;*/
+            }
+
+            #background4 {
+                /*background: url('/Images/6-Reasons.png');*/
+                background-position: center center;
+                background-size: cover;
+                /*opacity: 0.9;*/
+                position: fixed;
+                top: 800px;
+                /*z-index: -1;*/
+            }
+
+            #jumbotron {
+                position: fixed;
+                bottom: 0px;
+                left: 0px;
+                width: 100%;
+                height: 230px;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <nav>
+            <div class="menu-link-group">
+                <a href="/Home/Index" class="menu-link">Home Page</a>
+                <a href="/Home/Facilities" class="menu-link">Facilities</a>
+                <a href="/Home/Branches" class="menu-link">Branches</a>
+                <a href="/Home/Payment" class="menu-link">Payment Entry</a>
+                <a href="/Home/Contact" class="menu-link">Contact</a>
+            </div>
+
+        </nav>
+        @*<div>
+                <button class="open-button" onclick="openForm()">Sign Up</button>
+                <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                        <h1>Login</h1>
+
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="password" required>
+
+                        <button type="submit" class="btn">Login</button>
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                    </form>
+                </div>
+            </div>*@
+
+
+
+
+        @*Asıl Form Kodu*@
+        @*<div>
+                <button class="open-button" onclick="openForm()">Sign Up</button>
+                <div class="form-popup" id="myForm">
+                    <form href="~/Views/Home/Index.cshtml" method="post" class="form-container">
+                        <h3>Login</h3>
+                        @using (Html.BeginForm("Index","Home", FormMethod.Post, new { @class = "form-horizontal", role = "form", autocomplete = "off" }))
+                        {
+                            @Html.AntiForgeryToken()
+                            <hr />
+                            @Html.ValidationSummary("", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label", name = "Email" })
+                                <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", name = "Email" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label", name = "Password" })
+                                <div class="col-md-4">
+                                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", name = "Password" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" href="~/Views/Home/Index.cshtml" name="Login" class="btn btn-primary" value="Login" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="button" onclick="closeForm()" name="Close" class="btn btn-primary" value="Close" />
+                                </div>
+                            </div>
+                        }
+                    </form>
+                </div>
+            </div>*@
+        <div>
+            @RenderPage("~/Views/Home/FormPage.cshtml")
+        </div>
+        @*<article style="height: 100px">
+            <p style="margin-left: 600px"></p>
+            <a href="#" class="scrollup">Scroll</a>
+        </article>*@
+    </div>
+    @RenderBody()
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    @*<script>
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>*@
+    <script>
+        $(document).ready(function () { /*Sayfa yukarı kaydır button kodu..*/
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('.scrollup').fadeIn();
+                } else {
+                    $('.scrollup').fadeOut();
+                }
+            });
+            $('.scrollup').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>

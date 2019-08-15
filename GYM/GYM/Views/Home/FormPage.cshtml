@@ -1,0 +1,58 @@
+﻿@model GYM.Models.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/popup.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        <button class="open-button" onclick="openForm()">Sign Up</button>
+        <div class="form-popup" id="myForm">
+            @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @class = "form-container", role = "form", autocomplete = "off" }))
+            {
+                <h3>Login</h3>
+                @Html.AntiForgeryToken()
+                <hr />
+                @Html.ValidationSummary("", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-4">
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @style="width:210px;" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-4">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @style = "width:210px;" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" class="btn btn-primary" style="height:30px;padding-top:2px;" value="Login" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="button" onclick="closeForm()" class="btn btn-primary" style="height:30px;padding-top:2px;" value="Close" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+</html>

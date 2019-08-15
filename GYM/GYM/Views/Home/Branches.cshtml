@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Branches";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <style>
+        @@media only screen and (min-width:960px) {
+            #img {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                margin-left: 140px;
+                margin-top: 30px;
+            }
+
+            #h1 {
+                text-align: center;
+                color: white;
+            }
+
+            #p {
+                text-align: center;
+                color: white
+            }
+        }
+
+        @@media only screen and (min-width:769px) and (max-width:959px) {
+            #img {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                margin-left: 100px;
+                margin-top: 50px;
+            }
+
+            #h1 {
+                text-align: center;
+                font-size: 50px;
+                color: white;
+            }
+
+            #p {
+                text-align: center;
+                font-size: 25px;
+                color: white
+            }
+        }
+
+        @@media only screen and (max-width:768px) {
+            #img {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                margin-left: 60px;
+                margin-top: 56px;
+                margin-bottom: 50px;
+            }
+
+            #h1 {
+                text-align: center;
+                font-size: 40px;
+                color: white;
+            }
+
+            #p {
+                text-align: center;
+                font-size: 20px;
+                color: white
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-group p-5">
+        <div class="card">
+            <img class="card-img-top" src="~/Images/Screenshot_2.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Swimming</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="~/Images/bxr-boxinggym-hd-4.jpg" alt="Card image cap" style="height:307px;">
+            <div class="card-body">
+                <h5 class="card-title">Boxing</h5>
+                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card-img-top" src="~/Images/image.jpg" alt="Card image cap" style="height:307px;">
+            <div class="card-body">
+                <h5 class="card-title">Pilates</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid" id="jumbotron">
+        <div style="background-color:black; height:180px;">
+            <img src="/Images/12618.gif" alt="Alternate Text" id="img" />
+            <h1 class="display-4 p-3" id="h1">Geforce GYM</h1>
+            <p class="lead" id="p"><i>No pain no gain!</i></p>
+        </div>
+    </div>
+</body>

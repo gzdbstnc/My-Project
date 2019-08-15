@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .ball {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            /*position: absolute;*/
+            top: 50%;
+            left: 50%;
+            background-image: linear-gradient(-45deg, rgba(255,255,220,.2) 0%, transparent 100%);
+        }
+
+        body {
+            background-color: #191919;
+        }
+
+        .blue {
+            background-color: #0266C8;
+            animation: blue 7s infinite;
+        }
+
+        .red {
+            background-color: #F90101;
+            animation: red 7s infinite;
+        }
+
+        .yellow {
+            background-color: #F2B50F;
+            animation: yellow 7s infinite;
+        }
+
+        .green {
+            background-color: #00933B;
+            animation: green 7s infinite;
+        }
+
+        @@keyframes blue {
+            0% {
+                transform: translateX(-7px) translateY(-7px);
+            }
+
+            12.5% {
+                transform: translateX(7px) translateY(7px);
+                z-index: 10;
+            }
+
+            25% {
+                transform: translateX(-7px) translateY(-7px);
+                z-index: 0;
+            }
+
+            37.5% {
+                transform: translateX(7px) translateY(7px);
+            }
+
+            50% {
+                transform: translateX(-7px) translateY(-7px);
+            }
+
+            62.5% {
+                transform: translateX(7px) translateY(7px);
+                z-index: 10;
+            }
+
+            75% {
+                transform: translateX(-7px) translateY(-7px);
+                z-index: 0;
+            }
+
+            87.5% {
+                transform: translateX(7px) translateY(7px);
+            }
+
+            100% {
+                transform: translateX(-7px) translateY(-7px);
+            }
+        }
+
+        @@keyframes red {
+            0% {
+                transform: translateX(7px) translateY(-7px);
+                z-index: 0;
+            }
+
+            12.5% {
+                transform: translateX(-7px) translateY(7px);
+            }
+
+            25% {
+                transform: translateX(7px) translateY(-7px);
+            }
+
+            37.5% {
+                transform: translateX(-7px) translateY(7px);
+            }
+
+            50% {
+                transform: translateX(7px) translateY(-7px);
+                z-index: 10;
+            }
+
+            62.5% {
+                transform: translateX(-7px) translateY(7px);
+                z-index: 0;
+            }
+
+            75% {
+                transform: translateX(7px) translateY(-7px);
+            }
+
+            87.5% {
+                transform: translateX(-7px) translateY(7px);
+            }
+
+            100% {
+                transform: translateX(7px) translateY(-7px);
+                z-index: 10;
+            }
+        }
+
+        @@keyframes yellow {
+            0% {
+                transform: translateX(-7px) translateY(7px);
+            }
+
+            12.5% {
+                transform: translateX(7px) translateY(-7px);
+            }
+
+            25% {
+                transform: translateX(-7px) translateY(7px);
+            }
+
+            37.5% {
+                transform: translateX(7px) translateY(-7px);
+                z-index: 10;
+            }
+
+            50% {
+                transform: translateX(-7px) translateY(7px);
+                z-index: 0;
+            }
+
+            62.5% {
+                transform: translateX(7px) translateY(-7px);
+            }
+
+            75% {
+                transform: translateX(-7px) translateY(7px);
+            }
+
+            87.5% {
+                transform: translateX(7px) translateY(-7px);
+                z-index: 10;
+            }
+
+            100% {
+                transform: translateX(-7px) translateY(7px);
+                z-index: 0;
+            }
+        }
+
+        @@keyframes green {
+            0% {
+                transform: translateX(7px) translateY(7px);
+            }
+
+            12.5% {
+                transform: translateX(-7px) translateY(-7px);
+            }
+
+            25% {
+                transform: translateX(7px) translateY(7px);
+                z-index: 10;
+            }
+
+            37.5% {
+                transform: translateX(-7px) translateY(-7px);
+                z-index: 0;
+            }
+
+            50% {
+                transform: translateX(7px) translateY(7px);
+            }
+
+            62.5% {
+                transform: translateX(-7px) translateY(-7px);
+            }
+
+            75% {
+                transform: translateX(7px) translateY(7px);
+                z-index: 10;
+            }
+
+            87.5% {
+                transform: translateX(-7px) translateY(-7px);
+                z-index: 0;
+            }
+
+            100% {
+                transform: translateX(7px) translateY(7px);
+            }
+        }
+    </style>
+</head>
+<body>  
+    <header class="container-fluid">
+        <div class="jumbotron container">
+            <div class="row">
+                <h1 class="display-4"><b>Geforce GYM</b></h1>
+                <div class='ball blue'></div>
+                <div class='ball red'></div>
+                <div class='ball yellow'></div>
+                <div class='ball green'></div>
+            </div>
+           
+            <p class="lead"><b>Welcome to our site!</b></p>
+            <hr class="my-4">
+            @*<p><b>For transactions please register or login.</b></p>*@
+            @*<div class="row">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Register</a><br /><br />
+                <a class="btn btn-primary btn-lg" href="#" role="button" style="margin-left:30px;">Login</a>
+            </div>*@
+
+        </div>
+    </header>
+    <section>
+        <div class="container text-center">
+            <h1 class="display-4 pt-5"><b>Pre-Registeration Form</b></h1>
+            <p class="lead" style="font-size:25px;"><b>One simple step to join us.</b></p>
+            <hr class="my-4">
+            <p class="lead">
+                <b><a href="/Home/PreRegisteration">Click for pre-registeration</a></b>
+            </p>
+        </div>
+    </section>
+    <header class="container-fluid">
+        <div class="jumbotron container">
+            <p class="lead" style="color:black;font-size:24px;"><b>“Training gives us an outlet for suppressed energies created by stress and thus tones the spirit just as exercise conditions the body.” – Arnold Schwarzenegger</b></p>
+            <hr class="my-4">           
+
+        </div>
+    </header>
+    <section class="p-4" style="height: 550px">
+        <div class="card-group">
+            <div class="card">
+                <img src="~/Images/exercise-fitness-gettyimage.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Gallery</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <a href="/Home/Gallery">Click for more pictures</a>
+                    @*<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>*@
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Images/Screenshot_5.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Blog</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <a href="/Home/Blog">Click for more details</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="~/Images/Screenshot_6.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">About Us</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <a href="/Home/AboutUs">Click for more information</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <header class="container-fluid bg-dark mt-lg-4 mt-sm-4">
+        @*<div class="jumbotron container" style="background-image: url('../../Images/Water-wallpaper-12.jpg');">*@
+            @*<ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-fb mx-1">
+                        <img src="~/Images/facebook.png" alt="Alternate Text" />
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-tw mx-1">
+                        <img src="~/Images/twitter.png" alt="Alternate Text" />
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-gplus mx-1">
+                        <img src="~/Images/google-plus.png" alt="Alternate Text" />
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                        <img src="~/Images/swarm.png" alt="Alternate Text" />
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-dribbble mx-1">
+                        <img src="~/Images/instagram.png" alt="Alternate Text" />
+                    </a>
+                </li>
+            </ul>*@
+
+            @*<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>*@
+        @*</div>*@
+    </header>
+    <div class="index-background" id="background1">
+    </div>
+    <div class="index-background" id="background2">
+    </div>
+    <div class="index-background" id="background3">
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.slim.min.js"></script>
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

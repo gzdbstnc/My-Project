@@ -1,0 +1,175 @@
+﻿
+@{
+    ViewBag.Title = "Facilities";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        #gym {
+            background: url('../../Images/gym.jpg');
+                /*opacity: 0.4;*/
+                /*position:absolute;*/
+                z-index:-1;
+        }
+        #gym2 {
+            opacity:0.4;
+        }
+
+        @@media only screen and (min-width:960px) {
+            #img {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                margin-left: 140px;
+                margin-top: 30px;
+            }
+
+            #h1 {
+                text-align: center;
+                color: white;
+            }
+
+            #p {
+                text-align: center;
+                color: white
+            }
+        }
+
+        @@media only screen and (min-width:769px) and (max-width:959px) {
+            #img {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                margin-left: 100px;
+                margin-top: 50px;
+            }
+
+            #h1 {
+                text-align: center;
+                font-size: 50px;
+                color: white;
+            }
+
+            #p {
+                text-align: center;
+                font-size: 25px;
+                color: white
+            }
+        }
+
+        @@media only screen and (max-width:768px) {
+            #img {
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                margin-left: 60px;
+                margin-top: 56px;
+                margin-bottom: 50px;
+            }
+
+            #h1 {
+                text-align: center;
+                font-size: 40px;
+                color: white;
+            }
+
+            #p {
+                text-align: center;
+                font-size: 20px;
+                color: white
+            }
+        }
+    </style>
+</head>
+
+<body id="gym">
+    <div class="container mt-5 p-5">
+        <div class="card mb-3 mt-4" style="width:auto;box-shadow:7px 10px 18px 0px rgba(255,255,255,1);" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="/Images/6-Reasons.png" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/Images/HS-HDElite-Rack-BC-4psd.jpg" style="height:200px;" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/Images/Fun-Boxing-Gyms-To-Try-Out-In-Singapore_1.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Beşiktaş</h5>
+                        <p class="card-text">
+
+                            Nuhun Gemisi Hotel provides a friendly service to our guests who come to Cyprus with the Mediterranean culture and bring the pleasure of holiday to Cyprus with world standards and service quality in North Cyprus hotels ...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><br />
+        <div class="card mb-3 mt-4" style="width:auto;box-shadow:7px 10px 18px 0px rgba(255,255,255,1);" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <div class="row no-gutters">
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Nişantaşı</h5>
+                        <p class="card-text">
+
+                            Deluxe rooms offering the most beautiful sea of ​​Cyprus with a panoramic view promise a unique holiday experience with comfort.
+
+
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div id="carouselExampleControls2" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="/Images/6-Reasons.png" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/Images/HS-HDElite-Rack-BC-4psd.jpg" style="height:200px;" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/Images/Fun-Boxing-Gyms-To-Try-Out-In-Singapore_1.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls2" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls2" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="jumbotron jumbotron-fluid" id="jumbotron">
+        <div style="background-color:black; height:180px;">
+            <img src="/Images/12618.gif" alt="Alternate Text" id="img" />
+            <h1 class="display-4 p-3" id="h1">Geforce GYM</h1>
+            <p class="lead" id="p"><i>No pain no gain!</i></p>
+        </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
